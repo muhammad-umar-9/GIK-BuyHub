@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Restaurant Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>Restaurant Project</header>
+
+<div class="login-container">
+    <h2>Welcome Back!</h2>
+    <p class="subtitle">Sign in to continue your order.</p>
+
+    <input type="text" id="user-input" placeholder="Phone number or email">
+    <div id="error-message" class="error-message"></div>
+
+    <button class="main-btn" onclick="redirectToLanding()">Continue</button>
+
+    <div class="or-divider">or</div>
+
+    <button class="social-btn google">
+        <div class="social-content">
+            <img src="google_logo.png" class="icon">
+            <span>Continue with Google</span>
+        </div>
+    </button>
+
+    <button class="social-btn apple">
+        <div class="social-content">
+            <img src="apple.jpg" class="icon">
+            <span>Continue with Apple</span>
+        </div>
+    </button>
+
+    <div class="or-divider">or</div>
+
+    <button class="social-btn qr">
+        <div class="social-content">
+            <img src="qr-code-scan-svgrepo-com.svg" class="icon">
+            <span>Log in with QR Code</span>
+        </div>
+    </button>
+
+    <div class="footer-text">
+        By proceeding, you accept our Terms & Privacy Policy.
+    </div>
+</div>
+
+<script>
+function redirectToLanding() {
+    const inputField = document.getElementById('user-input');
+    const errorDiv = document.getElementById('error-message');
+    const userInput = inputField.value.trim();
+
+    if (userInput === "") {
+        errorDiv.textContent = "Please enter your phone number or email.";
+        inputField.focus();
+    } 
+    else if (!userInput.includes("@gmail.com")) {
+        errorDiv.textContent = "Only Gmail addresses are allowed (must include @gmail.com).";
+        inputField.focus();
+    }
+    else {
+        errorDiv.textContent = "";
+        window.location.href = "landing.html";
+    }
+}
+</script>
+
+</body>
+</html>
