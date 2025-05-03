@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login as Customer - Restaurant Project</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>Restaurant Project</header>
+
+<div class="login-container">
+    <h2>Customer Login</h2>
+    <p class="subtitle">Sign in to continue your order.</p>
+
+    <input type="email" id="customer-user-input" placeholder="Gmail address">
+    <input type="password" id="customer-password-input" placeholder="Password">
+    <div id="customer-error-message" class="error-message"></div>
+
+    <button class="main-btn" onclick="redirectToCustomerLanding()">Continue</button>
+
+    <div class="footer-text">
+        By proceeding, you accept our Terms & Privacy Policy.
+    </div>
+
+    <div class="account-switch">
+        Don't have an account? <a href="customer_sign_up.html">Sign up</a>
+    </div>
+</div>
+
+<script>
+function redirectToCustomerLanding() {
+    const email = document.getElementById('customer-user-input').value.trim();
+    const password = document.getElementById('customer-password-input').value.trim();
+    const errorDiv = document.getElementById('customer-error-message');
+
+    const storedUser = JSON.parse(localStorage.getItem(email));
+
+    if (!email || !password) {
+        errorDiv.textContent = "Please enter both email and password.";
+    } else if (!email.includes("@gmail.com")) {
+        errorDiv.textContent = "Only Gmail addresses are allowed.";
+    } else if (!storedUser || storedUser.password !== password || storedUser.type !== 'customer') {
+        errorDiv.textContent = "Account not found. Please sign up first.";
+    } else {
+        errorDiv.textContent = "";
+        window.location.href = "customerLandingPage";
+    }
+}
+</script>
+
+</body>
+</html>
