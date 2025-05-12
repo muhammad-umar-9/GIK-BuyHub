@@ -78,12 +78,6 @@ Contains the server-side code including Node.js/Express API, database connection
 - Admin dashboard
 - Reviews and ratings system
 
-## Contributors
-
-- [Student Name 1] - Project Lead
-- [Student Name 2] - Frontend Developer
-- [Student Name 3] - Backend Developer
-- [Student Name 4] - Database Designer
 
 ## License
 
