@@ -1,1 +1,132 @@
 
+/* styles.css */
+
+body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+  }
+  
+  .container {
+      flex: 1;
+  }
+  
+  /* Shop cards */
+  .shop-card {
+      transition: transform 0.3s ease;
+      height: 100%;
+  }
+  
+  .shop-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shop-card .card-img-top {
+      height: 180px;
+      object-fit: cover;
+  }
+  
+  /* Product cards */
+  .product-card {
+      transition: transform 0.2s ease;
+  }
+  
+  .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-card .card-img-top {
+      height: 160px;
+      object-fit: cover;
+  }
+  
+  /* Order cards */
+  .order-card {
+      transition: box-shadow 0.2s ease;
+  }
+  
+  .order-card:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Status badges */
+  .badge.status-pending {
+      background-color: #ffc107;
+      color: #000;
+  }
+  
+  .badge.status-processing {
+      background-color: #0dcaf0;
+  }
+  
+  .badge.status-completed {
+      background-color: #198754;
+  }
+  
+  .badge.status-cancelled {
+      background-color: #dc3545;
+  }
+  
+  .badge.status-delivered {
+      background-color: #198754;
+  }
+  
+  .badge.status-assigned {
+      background-color: #0d6efd;
+  }
+  
+  /* Cart item styling */
+  .cart-item {
+      border-bottom: 1px solid #eee;
+      padding: 10px 0;
+  }
+  
+  .cart-item:last-child {
+      border-bottom: none;
+  }
+  
+  /* Custom spacing */
+  .mb-30 {
+      margin-bottom: 30px;
+  }
+  
+  /* Sidebar navigation */
+  .sidebar {
+      position: sticky;
+      top: 20px;
+  }
+  
+  /* Tab content animations */
+  .fade {
+      transition: opacity 0.2s linear;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+      .jumbotron {
+          padding: 2rem 1rem;
+      }
+      
+      .shop-card .card-img-top,
+      .product-card .card-img-top {
+          height: 140px;
+      }
+  }
+  
+  /* Category pills */
+  .category-pill {
+      cursor: pointer;
+      transition: background-color 0.2s;
+  }
+  
+  .category-pill:hover {
+      background-color: #0d6efd !important;
+      color: #fff !important;
+  }
+  
+  .category-pill.active {
+      background-color: #0d6efd !important;
+      color: #fff !important;
+  }
