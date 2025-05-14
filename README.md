@@ -30,7 +30,7 @@ GIKIHub is a full-stack web application designed to revolutionize the tuck shop 
 
 ## Tech Stack
 
-*   **Frontend:** HTML, CSS, JavaScript (with Bootstrap and jQuery)
+*   **Frontend:** HTML, CSS, JavaScript 
 *   **Backend:** Node.js, Express.js
 *   **Database:** PostgreSQL and MongoDB (switchable via configuration)
 
